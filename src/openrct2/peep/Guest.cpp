@@ -5077,10 +5077,10 @@ void Guest::UpdateWalking()
             if ((0xFFFF & scenario_rand()) <= 4096)
             {
                 static constexpr const LitterType litter_types[] = {
-                    LITTER_TYPE_EMPTY_CAN,
-                    LITTER_TYPE_RUBBISH,
-                    LITTER_TYPE_EMPTY_BURGER_BOX,
-                    LITTER_TYPE_EMPTY_CUP,
+                    LitterType::EmptyCan,
+                    LitterType::Rubbish,
+                    LitterType::EmptyBurgerBox,
+                    LitterType::EmptyCup,
                 };
                 auto litterType = litter_types[scenario_rand() & 0x3];
                 int32_t litterX = x + (scenario_rand() & 0x7) - 3;
@@ -5097,7 +5097,7 @@ void Guest::UpdateWalking()
             && ((0xFFFF & scenario_rand()) <= 4096))
         {
             int32_t container = bitscanforward(GetEmptyContainerFlags());
-            LitterType litterType = LITTER_TYPE_SICK;
+            LitterType litterType = LitterType::Sick;
 
             if (container != -1)
             {

@@ -39,7 +39,7 @@ enum class EntityListId : uint8_t
     Count,
 };
 
-enum LitterType : uint8_t;
+enum class LitterType : uint8_t;
 
 struct Litter : SpriteBase
 {
@@ -195,20 +195,20 @@ enum
     SPRITE_FLAGS_PEEP_FLASHING = 1 << 9, // Deprecated: Use sprite_set_flashing/sprite_get_flashing instead.
 };
 
-enum LitterType : uint8_t
+enum class LitterType : uint8_t
 {
-    LITTER_TYPE_SICK,
-    LITTER_TYPE_SICK_ALT,
-    LITTER_TYPE_EMPTY_CAN,
-    LITTER_TYPE_RUBBISH,
-    LITTER_TYPE_EMPTY_BURGER_BOX,
-    LITTER_TYPE_EMPTY_CUP,
-    LITTER_TYPE_EMPTY_BOX,
-    LITTER_TYPE_EMPTY_BOTTLE,
-    LITTER_TYPE_EMPTY_BOWL_RED,
-    LITTER_TYPE_EMPTY_DRINK_CARTON,
-    LITTER_TYPE_EMPTY_JUICE_CUP,
-    LITTER_TYPE_EMPTY_BOWL_BLUE,
+    Sick,
+    SickAlt,
+    EmptyCan,
+    Rubbish,
+    EmptyBurgerBox,
+    EmptyCup,
+    EmptyBox,
+    EmptyBottle,
+    EmptyBowlRed,
+    EmptyDrinkCarton,
+    EmptyJuiceCup,
+    EmptyBowlBlue
 };
 
 SpriteBase* try_get_sprite(size_t spriteIndex);

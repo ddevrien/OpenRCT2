@@ -14,6 +14,7 @@
 
 struct Ride;
 enum class PeepThoughtType : uint8_t;
+enum class LitterType : uint8_t;
 
 enum class ShopItem : uint8_t
 {
@@ -95,7 +96,7 @@ struct ShopItemDescriptor
     uint32_t Image;
     ShopItemStrings Naming;
     uint16_t Flags;
-    uint8_t LitterType;
+    LitterType LitterType;
     uint8_t ConsumptionTime;
     ShopItem DiscardContainer;
     PeepThoughtType TooMuchThought;
